@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      #3e1f73 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+  }
+
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite alternate;
+}
+
+.menu {
+    width: 100%;
+    padding: 12px 16px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    z-index: 1;
+}
+  
+.menu__logo {
+    max-width: 160px;
+}
+  
+.menu__logo-image {
+    width: 100%;
+}
+  
+.menu__item {
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+  
+.menu__item--button {
+    padding: 8px 26px;
+    transition: background 1s, color 1s;
+}
+
+.header_content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+/* .header_content::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgb(31,31,31)); 
+    position~: absolute;
+} */
+
+.header__channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.title-header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    top: 18px;
+}
+
+.title-header-light {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    display: block;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.divider {
+    width: 150rem;
+    max-width: 700px;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.offer {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.offer_price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.offer-price_small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.text-small {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+.button {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button_gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    text-shadow: 0.1em 0.1em 0.2em rgb(95, 95, 95);
+    margin: 0;
+    position: relative;
+    bottom: 60px;
+}
+
+@keyframes gradient { 
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
